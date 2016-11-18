@@ -67,9 +67,4 @@
 /** View's bounds height **/
 @property (nonatomic, assign) CGFloat   boundsHeight;
 
-/** 
- Centers the view to its parent view (if exists) 
- */
--(void) centerToParent;
-
 @end

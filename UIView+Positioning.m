@@ -174,26 +174,4 @@
     return self.bounds.size.height;
 }
 
-// Methods
--(void)centerToParent{
-    if(self.superview){
-        switch ([UIApplication sharedApplication].statusBarOrientation){
-            case UIInterfaceOrientationLandscapeLeft:
-            case UIInterfaceOrientationLandscapeRight:{
-                self.origin     = CGPointMake((self.superview.height / 2.0) - (self.width / 2.0),
-                                              (self.superview.width / 2.0) - (self.height / 2.0));
-                break;
-            }
-            case UIInterfaceOrientationPortrait:
-            case UIInterfaceOrientationPortraitUpsideDown:{
-                self.origin     = CGPointMake((self.superview.width / 2.0) - (self.width / 2.0),
-                                              (self.superview.height / 2.0) - (self.height / 2.0));
-                break;
-            }
-            case UIInterfaceOrientationUnknown:
-                return;
-        }
-    }
-}
-
 @end
